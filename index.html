@@ -3,14 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esther Lauder | About</title>
+    <title>Esther Lauder | Clean, Retro, Rich Aesthetic</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tambahan gaya khusus untuk Landing Page (bisa dipindahkan ke style.css) */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, var(--bg-color), rgba(44, 38, 33, 0.1));
+            border-bottom: 1px solid #e0d5c1;
+            margin-bottom: 40px;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #666;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #2c2621;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border: 1px solid #2c2621;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: transparent;
+            color: #2c2621;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .feature-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #2c2621;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html" class="brand-logo">Esther Lauder</a>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">About</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="team.html">Structure</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="reviews.html">Reviews</a></li>
@@ -18,15 +68,40 @@
         </ul>
     </nav>
 
-    <main>
-        <h1 class="page-title">La Maison</h1>
-        <p class="est-date">Est. 1970 — Paris, France</p>
-        <p class="about-text"><strong>Esther Lauder</strong> lahir dari keanggunan kota Paris pada tahun 1970. Sebagai <em>sister brand</em> dari kosmetik legendaris Estée Lauder, kami hadir dengan identitas yang berbeda namun tetap mempertahankan kualitas premium.</p>
-        <p class="about-text">Membawa tema <strong>Clean, Retro, Rich Aesthetic</strong>, kami percaya bahwa kecantikan sejati berasal dari perpaduan antara inovasi modern yang bersih, keanggunan gaya retro yang tak lekang oleh waktu, dan kemewahan dalam setiap sentuhan.</p>
+    <main style="padding: 0; max-width: 100%;">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Esther Lauder</h1>
+            <p class="hero-subtitle">Est. 1970 — Paris, France</p>
+            <a href="products.html" class="cta-button">Discover The Collection</a>
+        </section>
+
+        <!-- Brand Story Section -->
+        <section style="max-width: 800px; margin: 0 auto; padding: 0 20px; text-align: center;">
+            <h2 class="page-title" style="font-size: 2rem;">La Maison</h2>
+            <p class="about-text"><strong>Esther Lauder</strong> lahir dari keanggunan kota Paris pada tahun 1970. Sebagai <em>sister brand</em> dari kosmetik legendaris Estée Lauder, kami hadir dengan identitas yang berbeda namun tetap mempertahankan kualitas premium[cite: 4].</p>
+            
+            <div class="features">
+                <div class="feature-item">
+                    <h3>Clean</h3>
+                    <p>Inovasi modern yang bersih.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Retro</h3>
+                    <p>Keanggunan yang tak lekang oleh waktu.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Rich</h3>
+                    <p>Kemewahan dalam setiap sentuhan.</p>
+                </div>
+            </div>
+            
+            <p class="about-text" style="margin-top: 40px; font-style: italic;">Kami percaya bahwa kecantikan sejati berasal dari perpaduan antara inovasi modern yang bersih, keanggunan gaya retro, dan kemewahan sejati[cite: 4].</p>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 1970 - 2026 Esther Lauder Paris. All Rights Reserved.</p>
+    <footer style="margin-top: 60px; text-align: center; padding: 20px;">
+        <p>&copy; 1970 - 2026 Esther Lauder Paris. All Rights Reserved.[cite: 4]</p>
     </footer>
 </body>
 </html>
