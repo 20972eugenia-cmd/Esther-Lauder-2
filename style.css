@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+    --bg-color: #F9F6F0; 
+    --text-color: #2C2621; 
+    --accent-color: #9C7D53; 
+    --light-accent: #E8DCCB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan footer selalu di bawah */
+}
+
+h1, h2, h3, h4, .brand-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(249, 246, 240, 0.95);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid var(--light-accent);
+}
+
+.brand-logo {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+/* MAIN CONTENT CONTAINER */
+main {
+    flex: 1; /* Mengisi sisa ruang kosong antara nav dan footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 150px 10% 80px 10%; /* Memberi jarak agar tidak tertutup Navbar */
+}
+
+.page-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+.page-title::after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent-color);
+    display: block;
+    margin: 15px auto 40px auto;
+}
+
+/* SPECIFIC PAGE STYLES */
+.est-date {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+.about-text {
+    max-width: 700px;
+    font-size: 1.1rem;
+    margin: 0 auto 20px auto;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+.team-member {
+    width: 250px;
+    padding: 40px 20px;
+    border: 1px solid var(--light-accent);
+    background-color: #fffdfa;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+.team-role {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.team-name { font-size: 1.8rem; }
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.product-card {
+    width: 320px;
+    text-align: left;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 20px;
+}
+.product-card h3 { font-size: 2.2rem; margin-bottom: 15px; }
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 900px;
+}
+.review-item h4 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.contact-box {
+    border: 1px solid var(--accent-color);
+    padding: 60px;
+    max-width: 600px;
+    width: 100%;
+    background-color: #fffdfa;
+}
+.contact-info { margin: 25px 0; font-size: 1.3rem; }
+.contact-info a { color: var(--text-color); text-decoration: none; }
+.contact-info a:hover { color: var(--accent-color); }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
